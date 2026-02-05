@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>It's over 9000</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ff9800;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 10px;
+        }
+
+        input, select, button {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="leftMember" placeholder="Left">
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+
+        <input type="text" id="rightMember" placeholder="Right">
+
+        <button onclick="calculate()">Try me!</button>
+    </div>
+
+    <script>
+        function calculate() {
+            var leftStr = document.getElementById("leftMember").value;
+            var rightStr = document.getElementById("rightMember").value;
+            var op = document.getElementById("operator").value;
+
+            var left = parseInt(leftStr);
+            var right = parseInt(rightStr);
+
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+                alert("Error :(");
+                console.log("Error :(");
+                return;
+            }
+
+            if ((op === '/' || op === '%') && right === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            var result;
+            if (op === '+') {
+                result = left + right;
+            } else if (op === '-') {
+                result = left - right;
+            } else if (op === '*') {
+                result = left * right;
+            } else if (op === '/') {
+                result = left / right;
+            } else if (op === '%') {
+                result = left % right;
+            }
+
+            alert(result);
+            console.log(result);
+        }
+
+        setInterval(function() {
+            alert("Please, use me...");
+        }, 30000);
+    </script>
+
+</body>
+</html>

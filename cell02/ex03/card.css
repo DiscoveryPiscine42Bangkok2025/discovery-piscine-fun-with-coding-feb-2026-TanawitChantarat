@@ -1,0 +1,95 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    background-color: white;
+    width: 350px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px (0.2);
+    overflow: hidden; 
+}
+
+.card-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center-content {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ecf0f1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-name {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+}
+
+.description1 {
+    margin: 5px 0;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.description2 {
+    margin: 5px 0;
+    color: #050505;
+    font-style: italic;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.contact-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px (0.1);
+}
+
+.contact-btn:hover {
+    background-color: #3498db;
+}
+
+/* กดแล้วปุ่มยุบลงนิดนึง */
+.contact-btn:active {
+    transform: translateY(2px);
+}
